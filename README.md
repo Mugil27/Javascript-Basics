@@ -4,7 +4,16 @@ Build four JavaScript objects, each one representing a different resume section.
 
 The resume has four distinct sections: work, education, projects and a header with biographical information.
 
-# Files 
+#  What I will Learn from this project:
+* Javascript syntax
+* manipulating data types (like JSON)
+* Javascript Objects
+* building loops
+* creating functions
+* jQuery DOM manipulation methods
+
+# Files Included:
+
 * **index.html**: The main HTML document. Contains links to all of the CSS and JS resources needed to render the resume, including resumeBuilder.js.
 * **js/helper.js**: Contains helper code needed to format the resume and build the map. It also has a few function shells for additional functionality. More on helper.js further down.
 * **js/resumeBuilder.js**: This file is empty. You should write your code here.
