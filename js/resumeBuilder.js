@@ -1,3 +1,3 @@
-/*
-This is empty on purpose! Your code to build the resume will go here.
- */
+// append function usage
+// $ is jquery , so I am appending my name with id-main
+$("#main").append("Anum Sharma");
