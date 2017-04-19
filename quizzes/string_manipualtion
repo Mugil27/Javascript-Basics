@@ -1,0 +1,14 @@
+Quiz1: Using string methods, convert "audacity" to "Udacity".
+
+Solution:
+var udacityizer = function(s) {  
+    var s='U' +s.slice(2);
+    return s;
+};
+
+console.log(udacityizer(s));
+
+output: Udacity
+---------------------------------------------------------------------------------------------------------------------------
+
+Quiz 2: 
