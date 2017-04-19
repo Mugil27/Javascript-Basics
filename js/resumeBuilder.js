@@ -1,15 +1,15 @@
-var name= "Anum Sharma"
-var role= "Full Stack Engineer"
-
-var formattedName=  HTMLheaderName.replace(%data%,name)
-var formattedRole= HTMLheaderRole.replace(%data%,role)
-
-$('#header').prepend(formattedName);
-$('#header').append(formattedName);
+var bio = {
+		"Address":"USA",
+		"Gender":"Female",
+		"Contact":"408-888-8888",
+		"email":"anum@udacity.com"
+		"skills":["communication","hard working", "confident","learner"]
+}
 
 
 
 /*
+CONCEPTS LEARNED FROM THIS COURSE
 
 1. append method:
 example :  $("#main").append("Anum Sharma");
