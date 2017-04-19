@@ -1,9 +1,20 @@
- /*
+var name= "Anum Sharma"
+var role= "Full Stack Engineer"
+
+var formattedName=  HTMLheaderName.replace(%data%,name)
+var formattedRole= HTMLheaderRole.replace(%data%,role)
+
+$('#header').prepend(formattedName);
+$('#header').append(formattedName);
+
+
+
+/*
 
 1. append method:
 example :  $("#main").append("Anum Sharma");
 
-2. $ is jquery , so I am appending my name after the below div tag in index.html
+2. $ is jquery , so I am appending my name in the end of html
 
  <div id="main">
     <div id="header" class="center-content clear-fix">
@@ -13,17 +24,34 @@ example :  $("#main").append("Anum Sharma");
 var name="anum";
 var age =20;
 
-4. console.log("anum")  will display anum in console tab (developer tool)  for debugging purpose
-
+4. console.log = to print or to display the content
+example 1: console.log("anum") ;
+		  it will display anum in console.
 example2:  var name= "anum";
 		   console.log(name);
-
-4. replace method:
+console.log is also used  for debugging purposes.
+5. replace method:
 example:   var email= "anum@udacity.com";
 		  var new_email= email.replace("udacity", "gmail");
 		   console.log(email);
 		   console.log(new_email);
 
-5. 
+6. mixing replace() and append()  :
+var name= "Anum Sharma"
+var role= "Full Stack Engineer"
+
+var formattedName=  HTMLheaderName.replace(%data%,name)
+var formattedRole= HTMLheaderRole.replace(%data%,role)
+
+$('#header').prepend(formattedName);
+$('#header').append(formattedName);
+
+7. Arrays:
+
+var skills= ["communication","hard working", "confident","learner"]
+console.log(skills[0]);  // communication
+console.log(skills.length)  // 4
+
+
 
 */
