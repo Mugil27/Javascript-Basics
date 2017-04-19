@@ -52,6 +52,23 @@ var skills= ["communication","hard working", "confident","learner"]
 console.log(skills[0]);  // communication
 console.log(skills.length)  // 4
 
+8. objects:
 
+var udacity={
+		"address":"Mountain View",
+		"isGood":"Yes",
+		"NumberOfCourses": 200
+		}
+
+where : 
+udacity is the object 
+address, isGood, NumberOfCourses are the properties
+Mountain View, Yes and 200 are the values.
+
+Accessing the udacity object values:
+
+$('#main').append(udacity.address);
+
+9. 
 
 */
