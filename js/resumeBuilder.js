@@ -1,51 +1,101 @@
-var formattedName = HTMLheaderName.replace("%data%", "Anum Sharma");
-var formattedRole = HTMLheaderRole.replace("%data%", "Full Stack Developer");
-$("#header").prepend(formattedRole);
-$("#header").prepend(formattedName);
+/* BIO JSON object --------------*/
+
 var bio = {
-"name" : "Anum Sharma",
-"role" : "Full Stack Engineer",
-"contacts" : {
-"mobile" : "408-888-8888",
-"email" : "anumsharma@gmail.com",
-"github" : "anumsh",
-"location" : "Santa Clara"
-},
-"welcomeMessage" : "Welcome to my resume. Below, please find my skills, work history, and education",
-"skills" : ["JavaScript", "HTML", "GitHub", "Python", "CSS","Flask","Linux","Google App Engine"],
-"bioPic" : "images/fry.jpg"
+    "name": "Anum Sharma",
+    "role": "Full Stack Developer",
+    "contacts": {
+        "mobile": "408-888-8888",
+        "email": "anumsharma09@gmail.com",
+        "github": "anumsh",
+	"twitter":"@sharma_anum",
+       "linkedIn":"www.linkedin.com/anumsharma"
+    },
+    "welcomeMessage": "Welcome to my resume. Below, please find my skills, work history, and education",
+    "skills": ["Python", "Linux Configuration", "HTML/CSS", "Bootstrap", "Javacript", "Flask", "PostgreSQL", "Google App Engine"],
+    "bioPic": "images/fry.jpg"
 }
-var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
-var formattedEmail = HTMLemail.replace("%data%",bio.contacts.email);
-var formattedGithub = HTMLgithub.replace("%data%",bio.contacts.github);
-var formattedLocation = HTMLlocation.replace("%data%",bio.contacts.location);
-var formattedWelcome = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
-var formattedBiopic = HTMLbioPic.replace("%data%",bio.bioPic);
-$("#header").append(formattedBiopic);
-$("#header").append(formattedMobile);
-$("#header").append(formattedEmail);
-$("#header").append(formattedGithub);
-$("#header").append(formattedLocation);
-$("#header").append(formattedWelcome);
-if (bio.skills.length > 0) {
-$("#header").append(HTMLskillsStart);
-var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
-$("#skills").append(formattedSkill);
-formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
-$("#skills").append(formattedSkill);
-formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
-$("#skills").append(formattedSkill);
-formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
-$("#skills").append(formattedSkill);
-formattedSkill = HTMLskills.replace("%data%", bio.skills[4]);
-$("#skills").append(formattedSkill);
-formattedSkill = HTMLskills.replace("%data%", bio.skills[5]);
-$("#skills").append(formattedSkill);
-formattedSkill = HTMLskills.replace("%data%", bio.skills[6]);
-$("#skills").append(formattedSkill);
-formattedSkill = HTMLskills.replace("%data%", bio.skills[7]);
-$("#skills").append(formattedSkill);
+
+/* bio  display -------------------------------------*/
+var displayBio = function() {
+    var formattedName = HTMLheaderName.replace("%data%", bio.name);
+    var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+    var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
+    var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
+    var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
+    var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
+    var formattedLinkedin = HTMLlinkedin.replace("%data%", bio.contacts.linkedIn);
+    var formattedBiopic = HTMLbioPic.replace("%data%", bio.bioPic);
+    var formattedWelcome = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+    $("#header").prepend(formattedRole);
+    $("#header").prepend(formattedName);
+    $("#topContacts, #footerContacts").append(formattedMobile);
+    $("#topContacts, #footerContacts").append(formattedEmail);
+    $("#topContacts, #footerContacts").append(formattedGithub);
+    $("#topContacts, #footerContacts").append(formattedTwitter);
+    $("#topContacts, #footerContacts").append(formattedLinkedin);
+    $("#header").append(formattedBiopic);
+    $("#header").append(formattedWelcome);
+    if (bio.skills.length > 0) {
+        $("#header").append(HTMLskillsStart);
+        for (var i in bio.skills) {
+            var formattedSkills = HTMLskills.replace("%data%", bio.skills[i]);
+            $("#header").append(formattedSkills);
+        }
+    }
 }
+displayBio();
+
+/* WORK object ---------------*/
+
+/*
+array of objects: 
+var work = { 
+	"jobs": [ {object1/job1}, {object2/job2}, {object3/job3}]
+}
+*/
+var work = {
+    "jobs": [{
+        "employer": "Tata Consultancy Services",
+        "title": "Quality Assurance",
+        "location": "Bangalore, India",
+        "dates": "May-2015",
+        "Description": ["Developed Data Integration Framework which provides "  +
+				" integrated platform for application teams (users) to develop " + 
+				" their ETL jobs and perform regression testing for APIs.",
+				"Developed Automation Suite for all the APIs and reviewed test cases with development team. ",
+				" Offered  Migration/Self Service Module which will give set " +
+				" up our DI platform/ Environment and migration module for migration the environment and code.",
+				"Performed  regression testing for existing/affected APIs. "
+        ]
+    }]
+}
+
+/* displayWork()  function ----------------------*/
+
+function displayWork() {
+    for (job in work.jobs) {
+        // create new div for work experience
+        $("#workExperience").append(HTMLworkStart);
+        // concate employer and title
+        var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+        var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
+        var formattedEmployerTitle = formattedEmployer + formattedTitle;
+        $(".work-entry:last").append(formattedEmployerTitle);
+
+        var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
+        $(".work-entry:last").append(formattedLocation);
+        var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
+        $(".work-entry:last").append(formattedDates);
+        if (work.jobs[job].Description.length > 0) {
+            for (var i in work.jobs[job].Description) {
+                var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].Description[i]);
+                $(".work-entry:last").append(formattedDescription);
+            }
+        }
+    }
+}
+
+displayWork();
 
 
 /*
