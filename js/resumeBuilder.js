@@ -4,7 +4,6 @@ var bio = {
     "name": "Anum Sharma",
     "role": "Full Stack Developer",
     "contacts": {
-        "mobile": "408-888-8888",
         "email": "anumsharma09@gmail.com",
         "github": "anumsh",
 	"twitter":"@sharma_anum",
@@ -19,7 +18,6 @@ var bio = {
 var displayBio = function() {
     var formattedName = HTMLheaderName.replace("%data%", bio.name);
     var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-    var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
     var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
     var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
     var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
@@ -28,7 +26,6 @@ var displayBio = function() {
     var formattedWelcome = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
     $("#header").prepend(formattedRole);
     $("#header").prepend(formattedName);
-    $("#topContacts, #footerContacts").append(formattedMobile);
     $("#topContacts, #footerContacts").append(formattedEmail);
     $("#topContacts, #footerContacts").append(formattedGithub);
     $("#topContacts, #footerContacts").append(formattedTwitter);
