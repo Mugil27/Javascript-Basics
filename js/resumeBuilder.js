@@ -1,4 +1,4 @@
-/* BIO JSON object --------------*/
+/* ------------------------------------------------BIO JSON object ----------------------------------------------*/
 
 var bio = {
     "name": "Anum Sharma",
@@ -14,7 +14,7 @@ var bio = {
     "bioPic": "images/fry.jpg"
 }
 
-/* bio  display -------------------------------------*/
+/* bio  display  function -------------------------------------*/
 var displayBio = function() {
     var formattedName = HTMLheaderName.replace("%data%", bio.name);
     var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
@@ -42,7 +42,7 @@ var displayBio = function() {
 }
 displayBio();
 
-/* WORK object ---------------*/
+/*  -------------------------------------------  WORK JSON object------------------------------------------------------------*/
 
 /*
 array of objects: 
@@ -94,6 +94,7 @@ function displayWork() {
 
 displayWork();
 
+/* ----------------------------------------EDUCATION  JSON object -------------------------------------------------------------*/
 var education = {
     
     "schools" : [
@@ -117,20 +118,22 @@ var education = {
     "onlineCourses" : 
                 [
                 {
-                "title" : "Full Stack Web Developer",
+                "title" : "Full Stack Web Developer Nanodegree",
                 "name" : "Udacity",
                 "date" : "2017",
                 "url" : "www.udacity.com"
                 },
                 
                 {
-                "title" : "Intro To Programming",    
+                "title" : "Intro To Programming Nanodegree",    
                 "name" : "Udacity",
                 "date" : "2016",
                 "url" : "www.udacity.com"
                 }
                 ]
 };
+
+/*  display education function */
 
 var displayEducation = function(){
     for (i in education.schools){
@@ -164,8 +167,22 @@ var displayEducation = function(){
 
 displayEducation();
 
+
+/* ---------------------------------------------PROJECT  JSON object ----------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
 /*
-CONCEPTS LEARNED FROM THIS COURSE
+-------------------------------------CONCEPTS LEARNED FROM THIS COURSE-------------------------------------------
 
 1. append method:
 example :  $("#main").append("Anum Sharma");
