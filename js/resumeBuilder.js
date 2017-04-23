@@ -94,6 +94,69 @@ function displayWork() {
 
 displayWork();
 
+var education = {
+    
+    "schools" : [
+                {
+                "name" : "University of California, San Diego",
+                "degree" : "Bachelor of Science",
+                "major" : "Chemical Engineering",
+                "location" : "La Jolla, CA",
+                "gradDate" : "2010",
+                "url" : "www.ucsd.edu"
+                }
+                ],
+    
+    "onlineCourses" : 
+                [
+                {
+                "title" : "Front-End Web Developer",
+                "name" : "Udacity",
+                "date" : "Q2 2017",
+                "url" : "www.udacity.com"
+                },
+                
+                {
+                "title" : "Front-End Web Developer",    
+                "name" : "freeCodeCamp",
+                "date" : "Q1 2017",
+                "url" : "www.freecodecamp.com"
+                }
+                ]
+};
+
+education.display = function(){
+    
+        $("#education").append(HTMLschoolStart);    
+        for (i in education.schools){
+            var formattedSchoolsName = HTMLschoolName.replace("%data%", education.schools[i].name).replace("#", education.schools.url);
+            var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[i].degree);
+            var formattedDates = HTMLschoolDates.replace("%data%", education.schools[i].gradDate);
+            var formattedLocation = HTMLschoolLocation.replace("%data%", education.schools[i].location);
+            var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[i].major);
+            $(".education-entry:last").append(formattedSchoolsName);
+            $(".education-entry:last").append(formattedDates);
+            $(".education-entry:last").append(formattedDegree);
+            $(".education-entry:last").prepend(formattedLocation);
+            $(".education-entry:last").append(formattedMajor);
+        }
+
+        $("#education").append(HTMLonlineClasses);
+    
+        for (i in education.onlineCourses){ 
+            $("#education").append(HTMLschoolStart);
+            var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[i].title);
+            var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[i].name);
+            var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[i].date);
+            
+            $(".education-entry:last").append(formattedOnlineTitle);
+            $(".education-entry:last").append(formattedOnlineSchool);
+            $(".education-entry:last").append(formattedOnlineDates);
+        }
+        
+}
+
+education.display();
 
 /*
 CONCEPTS LEARNED FROM THIS COURSE

@@ -22,6 +22,7 @@ h6 {
 .work-entry,
 .project-entry {
   padding: 0 5%;
+background-color: pink;
 }
 
 h1 {
@@ -45,6 +46,8 @@ h3 {
   color: #000;
   line-height: 22px;
 }
+
+
 
 h4 {
   font-weight: bold;
@@ -97,11 +100,14 @@ a {
   font-size: 18px;
   color: #f3f3f3;
   line-height: 28px;
+background-color: red;
 }
 
 #skills-h3 {
   color: #f5ae23;
   display: none;
+background-color:gray;
+background-color: red;
 }
 
 .orange {
@@ -110,26 +116,29 @@ a {
 
 .orange-text {
   color: #f5ae23;
+background-color: brown;
 }
 
 .white-text {
   font-weight: bold;
   color: #fff;
+/*background-color: maroon;  */
+border: 2px solid blue
 }
 
 .gray {
-  background-color: #f3f3f3;
+  background-color: blue;
   padding-bottom: 10px;
   clear: both;
 }
 
 .dark-gray {
-  background-color: #4a4a4a;
+  background-color: yellow;
 }
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-color: green;
 }
 
 .flex-box {
@@ -139,6 +148,7 @@ a {
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 10px;
+background-color: purple;
 }
 
 .flex-column {
@@ -158,14 +168,16 @@ ul {
 
 .biopic {
   float: left;
-  padding: 10px;
+margin-top: 60px;
+  padding: 20px;
   width: 200px;
   display: none;
+border-radius: 50%;
+
+ /*background-color: yellow; */
 }
 
-img {
-  padding: 10px;
-}
+
 
 span {
   padding: 5px;
