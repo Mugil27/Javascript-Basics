@@ -98,38 +98,45 @@ var education = {
     
     "schools" : [
                 {
-                "name" : "University of California, San Diego",
-                "degree" : "Bachelor of Science",
-                "major" : "Chemical Engineering",
-                "location" : "La Jolla, CA",
-                "gradDate" : "2010",
-                "url" : "www.ucsd.edu"
-                }
+                "name" : "Guru Nanak Dev University",
+                "degree" : "Masters of Computer Applications",
+                "major" : "Information Technology",
+                "location" : "Amritsar,India",
+                "gradDate" : "2012",
+                },
+{
+                "name" : "Apeejay College Of Fine Arts",
+                "degree" : "Bachelor of Computer Applications",
+                "major" : "Information Technology",
+                "location" : "Jalandhar,India",
+                "gradDate" : "2009",
+                } 
+
                 ],
     
     "onlineCourses" : 
                 [
                 {
-                "title" : "Front-End Web Developer",
+                "title" : "Full Stack Web Developer",
                 "name" : "Udacity",
-                "date" : "Q2 2017",
+                "date" : "2017",
                 "url" : "www.udacity.com"
                 },
                 
                 {
-                "title" : "Front-End Web Developer",    
-                "name" : "freeCodeCamp",
-                "date" : "Q1 2017",
-                "url" : "www.freecodecamp.com"
+                "title" : "Intro To Programming",    
+                "name" : "Udacity",
+                "date" : "2016",
+                "url" : "www.udacity.com"
                 }
                 ]
 };
 
-education.display = function(){
-    
+var displayEducation = function(){
+    for (i in education.schools){
         $("#education").append(HTMLschoolStart);    
-        for (i in education.schools){
-            var formattedSchoolsName = HTMLschoolName.replace("%data%", education.schools[i].name).replace("#", education.schools.url);
+        
+            var formattedSchoolsName = HTMLschoolName.replace("%data%", education.schools[i].name);
             var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[i].degree);
             var formattedDates = HTMLschoolDates.replace("%data%", education.schools[i].gradDate);
             var formattedLocation = HTMLschoolLocation.replace("%data%", education.schools[i].location);
@@ -140,10 +147,9 @@ education.display = function(){
             $(".education-entry:last").prepend(formattedLocation);
             $(".education-entry:last").append(formattedMajor);
         }
-
-        $("#education").append(HTMLonlineClasses);
-    
-        for (i in education.onlineCourses){ 
+ $("#education").append(HTMLonlineClasses);
+	for (i in education.onlineCourses){ 
+       
             $("#education").append(HTMLschoolStart);
             var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[i].title);
             var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[i].name);
@@ -156,7 +162,7 @@ education.display = function(){
         
 }
 
-education.display();
+displayEducation();
 
 /*
 CONCEPTS LEARNED FROM THIS COURSE
