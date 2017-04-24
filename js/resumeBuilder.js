@@ -148,7 +148,7 @@ var displayEducation = function(){
             $(".education-entry:last").append(formattedDates);
             $(".education-entry:last").append(formattedDegree);
             $(".education-entry:last").prepend(formattedLocation);
-            $(".education-entry:last").append(formattedMajor);
+            $(".education-entry:last").append(formattedMajor);   
         }
  $("#education").append(HTMLonlineClasses);
 	for (i in education.onlineCourses){ 
