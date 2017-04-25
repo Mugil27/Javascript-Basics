@@ -187,6 +187,11 @@ span {
   text-align: center;
 }
 
+.project-img {
+  width:500px;
+  height:500px;
+}
+
 /* Media queries to handle various device widths */
 
 @media only screen and (max-width: 1024px) {

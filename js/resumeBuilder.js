@@ -170,6 +170,50 @@ displayEducation();
 
 /* ---------------------------------------------PROJECT  JSON object ----------------------------------------------*/
 
+var projects = {
+    "projects": [{
+            "title": "Neighborhood Map",
+            "dates": "April 2017",
+            "Description": "Developed  single page application featuring Map that display the  information of the neighborhood",
+            "images": ["images/nm.png"]
+        }, {
+            "title": "Movie Website",
+            "dates": "July 2016",
+            "Description": "Wrote the server-side code to store a list of favorite movies and served this data as a web page allowing visitors to review their movies and watch the trailers.",
+            "images": ["images/moviewebsite.png"]
+        }
+
+    ]
+}
+
+/* projects.display ---------------------------*/
+
+
+
+projects.display = function() {
+    // display code goes here
+    for (project in projects.projects) {
+        $("#projects").append(HTMLprojectStart);
+
+        var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
+        $(".project-entry:last").append(formattedTitle);
+
+        var formattedDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
+        $(".project-entry:last").append(formattedDates);
+
+        var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].Description);
+        $(".project-entry:last").append(formattedDescription);
+        if (projects.projects[project].images.length > 0) {
+            for (image in projects.projects[project].images) {
+                var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
+                $(".project-entry:last").append(formattedImage);
+                console.log(image);
+                console.log(projects.projects[project].images[image]);
+            }
+        }
+    }
+}
+projects.display();
 
 
 
