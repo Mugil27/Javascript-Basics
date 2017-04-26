@@ -22,7 +22,7 @@ h6 {
 .work-entry,
 .project-entry {
   padding: 0 5%;
-background-color: pink;
+/*background-color: pink; */
 }
 
 h1 {
@@ -100,14 +100,15 @@ a {
   font-size: 18px;
   color: #f3f3f3;
   line-height: 28px;
-background-color: red;
+/*background-color: red; */
 }
 
 #skills-h3 {
-  color: #f5ae23;
+  color: red;
   display: none;
-background-color:gray;
-background-color: red;
+  margin-bottom: 2px;
+  padding:2px;
+
 }
 
 .orange {
@@ -116,29 +117,30 @@ background-color: red;
 
 .orange-text {
   color: #f5ae23;
-background-color: brown;
+/*background-color: brown;*/
 }
 
 .white-text {
   font-weight: bold;
-  color: #fff;
-/*background-color: maroon;  */
-border: 2px solid blue
+  color: #D4C179  ;
+/*background-color: maroon;
+border: 2px solid blue*/
 }
 
 .gray {
-  background-color: blue;
+  background-color: #524927    ;
   padding-bottom: 10px;
   clear: both;
 }
 
+
 .dark-gray {
-  background-color: yellow;
+  background-color: #FFFFFF  ;
 }
 
 /* TODO: Replace with image later */
 #header {
-  background-color: green;
+  background-color: #040B0E  ;
 }
 
 .flex-box {
@@ -148,7 +150,7 @@ border: 2px solid blue
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 10px;
-background-color: purple;
+/*background-color: purple; */
 }
 
 .flex-column {
