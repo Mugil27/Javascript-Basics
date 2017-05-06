@@ -8,6 +8,7 @@ var bio = {
         "github": "anumsh",
 	"twitter":"@sharma_anum",
        "linkedIn":"www.linkedin.com/anumsharma"
+       //"location": "Santa Clara"
     },
     "welcomeMessage": "Welcome to my resume. Below, please find my skills, work history, and education",
     "skills": ["Python", "Linux Configuration", "HTML/CSS", "Bootstrap", "Javacript", "Flask", "PostgreSQL", "Google App Engine"],
@@ -216,7 +217,9 @@ projects.display = function() {
 projects.display();
 
 
-
+/* MAP
+-----------------------------------*/
+$("#mapDiv").append(googleMap);
 
 
 
